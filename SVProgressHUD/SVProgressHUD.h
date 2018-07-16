@@ -130,6 +130,9 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 + (void)showImage:(nonnull UIImage*)image status:(nullable NSString*)status;
 + (void)showImage:(nonnull UIImage*)image status:(nullable NSString*)status maskType:(SVProgressHUDMaskType)maskType __attribute__((deprecated("Use showImage:status: and setDefaultMaskType: instead.")));
 
+// show status without image
++ (void)showTextWithStatus:(nullable NSString*)status;
+
 + (void)setOffsetFromCenter:(UIOffset)offset;
 + (void)resetOffsetFromCenter;
 

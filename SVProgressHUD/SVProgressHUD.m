@@ -330,6 +330,10 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
     [self setDefaultMaskType:existingMaskType];
 }
 
++ (void)showTextWithStatus:(nullable NSString*)status {
+    NSTimeInterval displayInterval = [self displayDurationForString:status];
+    [[self sharedView] showImage:nil status:status duration:displayInterval];
+}
 
 #pragma mark - Dismiss Methods
 
